@@ -1,0 +1,154 @@
+.form {
+  grid-area: form;
+  max-width: 512px;
+
+  background-color: #232225;
+  border-radius: 0.75rem;
+
+  padding: 5rem;
+  padding-bottom: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: scroll;
+}
+
+.form > header {
+  max-width: 21rem;
+  margin-bottom: 1.5rem;
+}
+
+.form > header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.form > header p {
+  color: #98959d;
+  font-size: 0.87rem;
+}
+
+.label {
+  font-size: 1rem;
+  color: #b2afb6;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  height: 3rem;
+
+  border: 1px solid #3e3c41;
+  padding: 0.87rem 0.75rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.input i {
+  margin-right: 0.5rem;
+}
+
+.input input {
+  flex: 1;
+
+  font-family: "Catamaran", sans-serif;
+
+  font-size: 1rem;
+  color: #b2afb6;
+  background-color: transparent;
+
+  outline: none;
+  border: none;
+}
+
+.input:focus-within {
+  border: 1.5px solid #b8952e;
+}
+
+.button {
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 0.87rem;
+  background-color: #b8952e;
+  color: #050505;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #dbc170;
+}
+
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  background: url("../assets/arrow-down.svg") no-repeat;
+}
+
+.hours {
+  list-style: none;
+
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+  margin-bottom: 2rem;
+}
+
+.hour {
+  width: 4.87rem;
+  height: 2.5rem;
+
+  border-radius: 0.5rem;
+
+  font-size: 1rem;
+  border: 1px solid #3e3c41;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hour-period {
+  width: 100%;
+  color: #98959d;
+  font-size: 0.87rem;
+
+  margin-top: 0.75rem;
+}
+
+.hour-available {
+  background-color: #2e2c30;
+}
+
+.hour-unavailable {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+.hour-selected {
+  border: 1px solid #b8952e;
+  color: #b8952e;
+}
+
+.hour:not(.hour-unavailable):hover {
+  border: 1px solid #b8952e;
+  color: #b8952e;
+}
+
+@media (max-width: 1100px) {
+  .form {
+    overflow-y: auto;
+    max-width: 100%;
+  }
+}

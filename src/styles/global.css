@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Catamaran", sans-serif;
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b8952e;
+}
+
+body {
+  background-color: #19181b;
+  color: #f5f4f5;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: calc(100vh - 1.5rem);
+  grid-template-areas: "form schedule";
+
+  padding: 0.75rem;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: #2e2c30;
+  padding: 0.75rem 1.25rem;
+  border-bottom-right-radius: 0.75rem;
+
+  height: 3.5rem;
+  width: 8.7rem;
+}
+
+@media (max-width: 1100px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
